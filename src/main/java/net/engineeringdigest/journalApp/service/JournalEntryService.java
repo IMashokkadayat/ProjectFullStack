@@ -75,9 +75,5 @@ public class JournalEntryService {
 
     }
 
-    public List<JournalEntry> findByUserName(String userName) {
-        return null;
-    }
-
 
 }
