@@ -1,0 +1,47 @@
+spring:
+  profiles:
+    active: dev
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: kadayatash11@gmail.com
+    password: "pwvpttdczivdlnlr"   # <-- your 16‑char Google App Password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  redis:
+      host: redis-16392.crce281.ap-south-1-3.ec2.cloud.redislabs.com
+      port: 16392
+      password: oCdldS9qKRUPLRraMLJYxoQVYmmPLR7s
+
+  kafka:
+    bootstrap-servers: pkc-9q8rv.ap-south-2.aws.confluent.cloud:9092
+    properties:
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: >
+            org.apache.kafka.common.security.plain.PlainLoginModule required
+            username='3TIBRAM32ZEVSI32'
+            password='cfltSkeYQvAvPri8YgRuF6wmMOXrILLVZkEpEgOEXMuyWlp6hVQeKdpMxxgf623A';
+      security:
+        protocol: SASL_SSL
+      session.timeout.ms: 45000
+
+    consumer:
+      group-id: weekly-sentiment-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: net.engineeringdigest.journalApp.model
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+    client-id: ccloud-springboot-client-29909917-9949-4850-9a9a-5ab57002aa52

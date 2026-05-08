@@ -1,0 +1,19 @@
+spring:
+  data:
+    mongodb:
+      host: cluster0.4l84zkj.mongodb.net
+      uri: mongodb+srv://userashok:6WfYt899kTTdF6En@cluster0.4l84zkj.mongodb.net/?appName=Cluster
+      database: journaldb
+      auto-index-creation: true
+
+server:
+  port: 8083
+  servlet:
+    context-path: /journal
+
+# weather:
+#   api:
+#     key: "36eaf3e342174e49984bed7176a1ca3c"
+weather:
+  api:
+    key: "WHEATHER-API"
