@@ -5,8 +5,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: kadayatash11@gmail.com
-    password: "pwvpttdczivdlnlr"   # <-- your 16‑char Google App Password
+    username: USER_EMAIL
+    password: "16-CHAR_ PASSWORD"   # <-- your 16‑char Google App Password
     properties:
       mail:
         smtp:
@@ -16,8 +16,8 @@ spring:
 
   redis:
       host: redis-16392.crce281.ap-south-1-3.ec2.cloud.redislabs.com
-      port: 16392
-      password: oCdldS9qKRUPLRraMLJYxoQVYmmPLR7s
+      port: PORT_ID
+      password: REDIS_PASSWORD
 
   kafka:
     bootstrap-servers: pkc-9q8rv.ap-south-2.aws.confluent.cloud:9092
@@ -27,8 +27,8 @@ spring:
         jaas:
           config: >
             org.apache.kafka.common.security.plain.PlainLoginModule required
-            username='3TIBRAM32ZEVSI32'
-            password='cfltSkeYQvAvPri8YgRuF6wmMOXrILLVZkEpEgOEXMuyWlp6hVQeKdpMxxgf623A';
+            username='USER_NAME'
+            password='KAFKA_PASSWORD';
       security:
         protocol: SASL_SSL
       session.timeout.ms: 45000
