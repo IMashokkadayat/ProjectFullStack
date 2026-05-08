@@ -2,7 +2,7 @@ spring:
   data:
     mongodb:
       host: cluster0.ol8dl9h.mongodb.net
-      uri: mongodb+srv://kadayatash98_db_user:zKhjQNagswl4CFPo@cluster0.ol8dl9h.mongodb.net/?appName=Cluster0
+      uri: mongodb+srv://USER_NAME:PASSWORD@cluster0.ol8dl9h.mongodb.net/?appName=Cluster0
       database: journaldb
       auto-index-creation: true
 
